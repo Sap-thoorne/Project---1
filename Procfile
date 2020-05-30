@@ -1,1 +1,1 @@
-web: ./public npm start
+web: npm start
