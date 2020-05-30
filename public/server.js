@@ -1,21 +1,12 @@
 const express = require("express");
 let app = express();
-// const https = require("https");
 const fs = require('fs');
-
-// const options = {
-//   key: fs.readFileSync('./public/key.pem'),
-//   cert: fs.readFileSync('./public/cert.pem')
-// };
-
-// const server = https.createServer(options, app);
 
 const http = require('http');
 const server = http.createServer(app);
 
 let io = require('socket.io').listen(server);
 const port = process.env.PORT || 3000;
-// server.port = port;
 
 app.use(express.static(__dirname));
 
